@@ -42,7 +42,7 @@ const derived = await crypto.subtle.deriveBits(
 
 | Project | Description | Live Deployment |
 | :--- | :--- | :--- |
-| **[FrankPass](https://github.com/Mastermanikant/frank-pass)** | 100% Stateless & Zero-Knowledge Deterministic Password Generator (PBKDF2-HMAC-SHA512, 1M iterations, zero server storage). Source-available for security audit. | [frankpass.com](https://frankpass.com) &bull; [Live Demo](https://mastermanikant.github.io/frank-pass/) |
+| **[FrankPass](https://github.com/Mastermanikant/frank-pass)** | 100% Stateless & Zero-Knowledge Deterministic Password Generator (PBKDF2-HMAC-SHA512, 1M iterations, zero server storage). Source-available for security audit. | [frankpass.com](https://frankpass.com) &bull; [Live Demo](https://mastermanikant.github.io/frank-pass/) &bull; [v3.3.6 Release](https://github.com/Mastermanikant/frank-pass/releases/tag/v3.3.6) |
 | **[1-Click AI Chat Harvester](https://github.com/Mastermanikant/frankbase-transparency-ledger)** | Sovereign client-side Markdown, PDF, and Text exporter for ChatGPT, Claude, Gemini, DeepSeek, and Reddit. | [Chrome Store](https://chromewebstore.google.com/detail/1-click-ai-chat-harvester/ijlcbkgpgnejogbclkjkpmpojbgnndde) |
 | **[FrankBase Tools](https://github.com/Mastermanikant/frankbase-tools)** | 50+ free, instant, 100% in-browser web utilities (PDF, cryptography, text, formatting) with zero server uploads. | [tools.frankbase.com](https://tools.frankbase.com) |
 | **[FrankBase Transparency Ledger](https://github.com/Mastermanikant/frankbase-transparency-ledger)** | Public cryptographic audit trail for customer reviews and SHA-256 release checksums. | [store.frankbase.com](https://store.frankbase.com) |
