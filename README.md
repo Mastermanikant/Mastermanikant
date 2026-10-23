@@ -5,9 +5,9 @@
 
 <div align="center">
   <br/>
-  <img src="assets/founder-frankpass-lock.png" alt="Master Manikant Yadav with FrankPass Sovereign Cryptographic Lock" width="440" style="max-width: 100%; border-radius: 14px; border: 1px solid rgba(255, 255, 255, 0.15); box-shadow: 0 12px 32px rgba(0,0,0,0.6);" />
+  <img src="assets/neon-cybersecurity-master-portrait.png" alt="Master Manikant Yadav - Neon Cybersecurity Master Portrait with FrankPass 3D Lock" width="360" style="max-width: 100%; border-radius: 18px; border: 1px solid rgba(0, 150, 255, 0.4); box-shadow: 0 16px 40px rgba(0, 80, 255, 0.25);" />
   <br/>
-  <sub><em>Master Manikant Yadav with the FrankPass Sovereign Cryptographic 3D Lock</em></sub>
+  <sub><em>Master Manikant Yadav with the FrankPass 3D Sovereign Security Lock</em></sub>
   <br/><br/>
 </div>
 
