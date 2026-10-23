@@ -3,60 +3,61 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>1-Click AI Chat Harvester | Export ChatGPT, Claude, Gemini to PDF, Markdown & JSON</title>
-  <meta name="description" content="Official browser extension by Master Manikant Yadav. Export full AI conversations from Google Gemini, ChatGPT, Claude, DeepSeek, and Perplexity in 1 click to PDF, Markdown, JSON, and TXT with zero watermarks." />
+  <title>1-Click AI Chat Harvester | Export ChatGPT, Claude, Gemini to Markdown, PDF & JSON</title>
+  <meta name="description" content="Official browser extension by Master Manikant Yadav. Export full AI conversations from Google Gemini, ChatGPT, Claude, DeepSeek, and Perplexity to pristine Markdown, PDF, and JSON in 1 click. 100% offline, zero watermarks." />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://mastermanikant.github.io/Mastermanikant/ai-chat-harvester/" />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="1-Click AI Chat Harvester | Sovereign AI Chat Exporter" />
-  <meta property="og:description" content="Export ChatGPT, Claude, Gemini, DeepSeek chats to clean PDF, Markdown, and JSON in 1 click. Zero telemetry, zero watermarks, 100% local browser execution." />
+  <meta property="og:title" content="1-Click AI Chat Harvester | Free Sovereign AI Conversation Exporter" />
+  <meta property="og:description" content="Export ChatGPT, Claude, Gemini, DeepSeek chats to clean Markdown, A4 PDF, and JSON in 1 click. Zero telemetry, zero watermarks, 100% local browser execution." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://mastermanikant.github.io/Mastermanikant/ai-chat-harvester/" />
-  <meta property="og:image" content="https://mastermanikant.github.io/Mastermanikant/assets/ai-chat-harvester-preview.png" />
+  <meta property="og:image" content="https://mastermanikant.github.io/Mastermanikant/assets/ach-banner-1400x560.png" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="@mastermanikant" />
   <meta name="twitter:creator" content="@mastermanikant" />
-  <meta name="twitter:title" content="1-Click AI Chat Harvester | Multi-LLM Export Extension" />
-  <meta name="twitter:description" content="Sovereign browser extension for exporting AI chats without watermarks. Direct activation via FrankBase Store." />
-  <meta name="twitter:image" content="https://mastermanikant.github.io/Mastermanikant/assets/ai-chat-harvester-preview.png" />
+  <meta name="twitter:title" content="1-Click AI Chat Harvester | Free Multi-LLM Exporter" />
+  <meta name="twitter:description" content="1-click export extension for ChatGPT, Claude, Gemini, DeepSeek. Free install on Chrome, Edge & Firefox." />
+  <meta name="twitter:image" content="https://mastermanikant.github.io/Mastermanikant/assets/ach-banner-1400x560.png" />
 
   <!-- Schema.org SoftwareApplication JSON-LD -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
-    "name": "1-Click AI Chat Harvester PRO",
+    "name": "1-Click AI Chat Harvester",
     "operatingSystem": "Chrome, Brave, Edge, Opera, Firefox",
     "applicationCategory": "ProductivityApplication",
     "offers": {
       "@type": "Offer",
-      "price": "9.99",
+      "price": "0",
       "priceCurrency": "USD",
       "availability": "https://schema.org/InStock",
-      "url": "https://store.frankbase.com/products/ai-chat-harvester/"
+      "description": "Free core extension with 14-day Pro evaluation pass and optional hardware-bound lifetime license on FrankBase Store."
     },
     "author": {
       "@type": "Person",
       "name": "Master Manikant Yadav",
       "url": "https://mastermanikant.com"
     },
-    "description": "Multi-format AI conversation exporter for Google Gemini, ChatGPT, Claude, Perplexity, DeepSeek, and Copilot. Exports to clean A4 PDF, Markdown with frontmatter, structured JSON, and pure TXT with zero watermarks and zero cloud storage."
+    "description": "High-speed multi-format AI conversation exporter for Google Gemini, ChatGPT, Claude, Perplexity, DeepSeek, and Copilot. Exports to clean A4 PDF, Markdown with frontmatter, structured JSON, and pure TXT with zero watermarks and zero cloud storage."
   }
   </script>
 
   <style>
     :root {
-      --bg: #090d16;
-      --card-bg: rgba(16, 24, 39, 0.85);
-      --border: rgba(56, 189, 248, 0.2);
-      --border-hover: rgba(56, 189, 248, 0.5);
-      --text: #f1f5f9;
+      --bg: #070b14;
+      --card-bg: rgba(13, 20, 36, 0.88);
+      --border: rgba(56, 189, 248, 0.22);
+      --border-hover: rgba(56, 189, 248, 0.55);
+      --text: #f8fafc;
       --text-muted: #94a3b8;
+      --text-dim: #64748b;
       --accent: #38bdf8;
       --accent-glow: rgba(56, 189, 248, 0.35);
+      --green: #22c55e;
       --gold: #fbbf24;
-      --green: #10b981;
       --purple: #a855f7;
       --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
       --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
@@ -71,141 +72,290 @@
     body {
       background-color: var(--bg);
       background-image: 
-        radial-gradient(circle at 50% 0%, rgba(56, 189, 248, 0.12) 0%, transparent 60%),
-        radial-gradient(circle at 80% 40%, rgba(168, 85, 247, 0.08) 0%, transparent 50%);
+        radial-gradient(circle at 50% 0%, rgba(56, 189, 248, 0.15) 0%, transparent 55%),
+        radial-gradient(circle at 85% 35%, rgba(168, 85, 247, 0.1) 0%, transparent 45%),
+        radial-gradient(circle at 15% 65%, rgba(34, 197, 94, 0.06) 0%, transparent 45%);
       color: var(--text);
       font-family: var(--font-sans);
       line-height: 1.6;
-      padding: 2.5rem 1rem;
+      padding: 2rem 1rem 4rem;
       min-height: 100vh;
     }
 
     .container {
-      max-width: 920px;
+      max-width: 1040px;
       margin: 0 auto;
     }
 
     header {
       text-align: center;
-      margin-bottom: 2.5rem;
+      margin-bottom: 2.2rem;
     }
 
     .badge-bar {
       display: inline-flex;
       align-items: center;
-      gap: 0.5rem;
-      background: rgba(56, 189, 248, 0.1);
+      gap: 0.6rem;
+      background: rgba(56, 189, 248, 0.08);
       border: 1px solid var(--border);
       border-radius: 9999px;
-      padding: 0.35rem 1rem;
+      padding: 0.4rem 1.2rem;
       font-size: 0.82rem;
-      font-weight: 600;
+      font-weight: 700;
       color: var(--accent);
-      margin-bottom: 1.25rem;
+      margin-bottom: 1.4rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .badge-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--green);
+      box-shadow: 0 0 10px var(--green);
+      display: inline-block;
     }
 
     h1 {
-      font-size: 2.4rem;
-      font-weight: 800;
+      font-size: clamp(2.1rem, 4.4vw, 3.4rem);
+      font-weight: 900;
       letter-spacing: -0.03em;
-      line-height: 1.2;
-      margin-bottom: 0.85rem;
-      background: linear-gradient(135deg, #ffffff 30%, var(--accent) 100%);
+      line-height: 1.18;
+      margin-bottom: 1.1rem;
+      background: linear-gradient(135deg, #ffffff 40%, var(--accent) 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+      text-wrap: balance;
     }
 
     .subtitle {
-      font-size: 1.12rem;
+      font-size: clamp(1.02rem, 1.8vw, 1.2rem);
       color: var(--text-muted);
-      max-width: 700px;
-      margin: 0 auto 1.5rem;
+      max-width: 780px;
+      margin: 0 auto 1.8rem;
+      line-height: 1.65;
     }
 
-    .cta-group {
+    /* Store CTA Row */
+    .store-cta-heading {
+      font-size: 0.88rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-dim);
+      margin-bottom: 0.85rem;
+    }
+
+    .store-buttons-grid {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 1rem;
-      margin-bottom: 2rem;
+      gap: 0.85rem;
+      margin-bottom: 1.2rem;
     }
 
-    .btn {
+    .store-btn {
       display: inline-flex;
       align-items: center;
-      gap: 0.5rem;
-      padding: 0.75rem 1.4rem;
-      border-radius: 8px;
+      gap: 0.6rem;
+      padding: 0.85rem 1.45rem;
+      border-radius: 10px;
       font-weight: 700;
-      font-size: 0.95rem;
+      font-size: 0.96rem;
       text-decoration: none;
       transition: all 0.2s ease;
       cursor: pointer;
     }
 
-    .btn-primary {
+    .btn-chrome {
       background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
       color: #ffffff;
-      border: 1px solid rgba(56, 189, 248, 0.5);
+      border: 1px solid rgba(56, 189, 248, 0.45);
       box-shadow: 0 4px 18px var(--accent-glow);
     }
 
-    .btn-primary:hover {
+    .btn-chrome:hover {
       transform: translateY(-2px);
-      box-shadow: 0 6px 24px rgba(56, 189, 248, 0.5);
+      box-shadow: 0 8px 24px rgba(56, 189, 248, 0.5);
     }
 
-    .btn-store {
-      background: linear-gradient(135deg, #d97706 0%, #b45309 100%);
+    .btn-edge {
+      background: linear-gradient(135deg, #0f766e 0%, #115e59 100%);
       color: #ffffff;
-      border: 1px solid rgba(251, 191, 36, 0.5);
-      box-shadow: 0 4px 18px rgba(251, 191, 36, 0.25);
+      border: 1px solid rgba(20, 184, 166, 0.45);
+      box-shadow: 0 4px 18px rgba(20, 184, 166, 0.25);
     }
 
-    .btn-store:hover {
+    .btn-edge:hover {
       transform: translateY(-2px);
-      box-shadow: 0 6px 24px rgba(251, 191, 36, 0.4);
+      box-shadow: 0 8px 24px rgba(20, 184, 166, 0.4);
     }
 
-    .btn-secondary {
-      background: rgba(255, 255, 255, 0.05);
-      color: var(--text);
-      border: 1px solid rgba(255, 255, 255, 0.15);
+    .btn-firefox {
+      background: linear-gradient(135deg, #c2410c 0%, #9a3412 100%);
+      color: #ffffff;
+      border: 1px solid rgba(249, 115, 22, 0.45);
+      box-shadow: 0 4px 18px rgba(249, 115, 22, 0.25);
     }
 
-    .btn-secondary:hover {
-      background: rgba(255, 255, 255, 0.1);
-      border-color: rgba(255, 255, 255, 0.3);
+    .btn-firefox:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(249, 115, 22, 0.4);
     }
 
-    .hero-img-box {
-      text-align: center;
-      margin: 2rem 0;
-      padding: 1rem;
+    .microcopy-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.25rem;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 2.2rem;
+    }
+
+    .microcopy-row span {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .check-icon {
+      color: var(--green);
+      font-weight: 800;
+    }
+
+    /* Marquee Banner */
+    .hero-banner-box {
+      margin: 1.5rem 0 3rem;
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1.5px solid var(--border);
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.65), 0 0 50px rgba(56, 189, 248, 0.1);
+      background: #080d1a;
+    }
+
+    .hero-banner-box img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* Interactive Showcase Tabs */
+    .showcase-section {
       background: var(--card-bg);
-      border: 1px solid var(--border);
-      border-radius: 16px;
+      border: 1.5px solid var(--border);
+      border-radius: 18px;
+      padding: 1.75rem;
+      margin: 2.5rem 0 3.5rem;
       box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
     }
 
-    .hero-img-box img {
-      max-width: 100%;
-      height: auto;
+    .showcase-header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.25rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .showcase-header h2 {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .tabs-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      background: rgba(15, 23, 42, 0.8);
+      padding: 0.3rem;
       border-radius: 10px;
-      border: 1px solid rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .tab-btn {
+      background: transparent;
+      color: var(--text-muted);
+      border: 1px solid transparent;
+      border-radius: 7px;
+      padding: 0.45rem 0.95rem;
+      font-size: 0.82rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      font-family: var(--font-sans);
+    }
+
+    .tab-btn:hover {
+      color: var(--text);
+    }
+
+    .tab-btn.active {
+      background: rgba(56, 189, 248, 0.18);
+      color: var(--accent);
+      border-color: rgba(56, 189, 248, 0.4);
+    }
+
+    .showcase-display {
+      background: #050811;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    .showcase-display img {
+      width: 100%;
+      height: auto;
+      max-height: 640px;
+      object-fit: contain;
+      display: block;
+    }
+
+    .showcase-caption {
+      padding: 0.85rem 1rem;
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      background: rgba(15, 23, 42, 0.95);
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+      text-align: center;
+    }
+
+    /* Features Grid */
+    .section-title {
+      font-size: 1.45rem;
+      font-weight: 800;
+      margin-bottom: 0.6rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .section-subtitle {
+      font-size: 0.96rem;
+      color: var(--text-muted);
+      margin-bottom: 1.75rem;
     }
 
     .grid-3 {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 1.25rem;
-      margin: 2.5rem 0;
+      margin-bottom: 3.5rem;
     }
 
     .feature-card {
       background: var(--card-bg);
       border: 1px solid var(--border);
-      border-radius: 12px;
+      border-radius: 14px;
       padding: 1.4rem;
       transition: all 0.2s ease;
     }
@@ -227,49 +377,84 @@
     .feature-card p {
       font-size: 0.9rem;
       color: var(--text-muted);
-      line-height: 1.5;
+      line-height: 1.55;
     }
 
-    .activation-box {
-      background: linear-gradient(135deg, rgba(16, 24, 39, 0.9) 0%, rgba(30, 27, 75, 0.6) 100%);
-      border: 1px solid rgba(168, 85, 247, 0.4);
+    /* Platforms Box */
+    .platforms-box {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
       border-radius: 14px;
-      padding: 2rem;
-      margin: 2.5rem 0;
+      padding: 1.75rem;
+      margin-bottom: 3.5rem;
     }
 
-    .activation-box h2 {
-      font-size: 1.4rem;
+    .platform-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.65rem;
+      margin-top: 1rem;
+    }
+
+    .tag {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 8px;
+      padding: 0.45rem 0.85rem;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #e2e8f0;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .tag-icon {
+      font-size: 0.95rem;
+    }
+
+    /* Uniform Onboarding Workflow Box */
+    .workflow-box {
+      background: linear-gradient(135deg, rgba(13, 20, 36, 0.95) 0%, rgba(20, 24, 52, 0.85) 100%);
+      border: 1.5px solid rgba(168, 85, 247, 0.4);
+      border-radius: 16px;
+      padding: 2.2rem;
+      margin-bottom: 3.5rem;
+      box-shadow: 0 16px 45px rgba(0, 0, 0, 0.5);
+    }
+
+    .workflow-box h2 {
+      font-size: 1.45rem;
       font-weight: 800;
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.6rem;
       color: #ffffff;
       display: flex;
       align-items: center;
       gap: 0.5rem;
     }
 
-    .activation-box p {
-      font-size: 0.95rem;
+    .workflow-box p {
+      font-size: 0.96rem;
       color: var(--text-muted);
-      margin-bottom: 1.5rem;
+      margin-bottom: 1.75rem;
     }
 
-    .steps-list {
+    .steps-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 1rem;
-      margin-bottom: 1.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.1rem;
+      margin-bottom: 1.75rem;
     }
 
-    .step-item {
-      background: rgba(0, 0, 0, 0.35);
+    .step-card {
+      background: rgba(0, 0, 0, 0.4);
       border: 1px solid rgba(255, 255, 255, 0.08);
-      border-radius: 10px;
-      padding: 1.1rem;
+      border-radius: 12px;
+      padding: 1.25rem;
     }
 
-    .step-number {
-      font-size: 0.8rem;
+    .step-num {
+      font-size: 0.78rem;
       font-weight: 800;
       text-transform: uppercase;
       color: var(--accent);
@@ -277,57 +462,74 @@
       font-family: var(--font-mono);
     }
 
-    .step-item h4 {
-      font-size: 0.98rem;
+    .step-card h4 {
+      font-size: 1rem;
       font-weight: 700;
       margin-bottom: 0.4rem;
+      color: #ffffff;
     }
 
-    .step-item p {
+    .step-card p {
       font-size: 0.86rem;
       color: var(--text-muted);
       margin-bottom: 0;
-      line-height: 1.45;
+      line-height: 1.5;
     }
 
-    .platforms-box {
-      background: var(--card-bg);
-      border: 1px solid var(--border);
+    .store-cta-card {
+      background: rgba(0, 0, 0, 0.5);
+      border: 1px dashed rgba(251, 191, 36, 0.4);
       border-radius: 12px;
-      padding: 1.5rem;
-      margin-bottom: 2.5rem;
-    }
-
-    .platforms-box h3 {
-      font-size: 1.15rem;
-      font-weight: 700;
-      margin-bottom: 1rem;
+      padding: 1.25rem 1.75rem;
       text-align: center;
-    }
-
-    .platform-tags {
       display: flex;
       flex-wrap: wrap;
-      justify-content: center;
-      gap: 0.6rem;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
     }
 
-    .tag {
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: 6px;
-      padding: 0.4rem 0.8rem;
-      font-size: 0.85rem;
-      font-weight: 600;
-      color: #e2e8f0;
+    .store-cta-info {
+      text-align: left;
+    }
+
+    .store-cta-info h4 {
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: var(--gold);
+      margin-bottom: 0.25rem;
+    }
+
+    .store-cta-info p {
+      font-size: 0.86rem;
+      color: var(--text-muted);
+      margin: 0;
+    }
+
+    .btn-store-link {
+      background: linear-gradient(135deg, #d97706 0%, #b45309 100%);
+      color: #ffffff;
+      border: 1px solid rgba(251, 191, 36, 0.5);
+      border-radius: 8px;
+      padding: 0.75rem 1.4rem;
+      font-weight: 700;
+      font-size: 0.92rem;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      white-space: nowrap;
+    }
+
+    .btn-store-link:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 18px rgba(251, 191, 36, 0.35);
     }
 
     footer {
       text-align: center;
-      padding-top: 2rem;
+      padding-top: 2.5rem;
       border-top: 1px solid rgba(255, 255, 255, 0.1);
       color: var(--text-muted);
-      font-size: 0.85rem;
+      font-size: 0.86rem;
     }
 
     footer a {
@@ -346,118 +548,169 @@
 
     <header>
       <div class="badge-bar">
-        <span>⚡ Official Sovereign Extension</span>
+        <span class="badge-dot"></span>
+        <span>Sovereign Browser Extension</span>
+        <span>•</span>
+        <span>100% Free Install</span>
         <span>•</span>
         <span>Zero Watermarks</span>
-        <span>•</span>
-        <span>100% Local Privacy</span>
       </div>
-      <h1>1-Click AI Chat Harvester PRO</h1>
+
+      <h1>Export AI Chats to Clean Markdown, PDF &amp; JSON in 1&nbsp;Click</h1>
       <p class="subtitle">
-        Export full AI conversations from Google Gemini, ChatGPT, Claude, DeepSeek, and Perplexity to PDF, Markdown, JSON, and Text in 1 click. Zero telemetry, zero cloud honeypots.
+        Harvest complete conversation histories from Google Gemini, ChatGPT, Claude, and DeepSeek directly into your local disk or Obsidian vault. 100% offline in browser RAM, zero cloud servers, zero telemetry.
       </p>
 
-      <div class="cta-group">
-        <a href="https://chromewebstore.google.com/detail/1-click-ai-chat-harvester/ijlcbkgpgnejogbclkjkpmpojbgnndde" class="btn btn-primary" target="_blank" rel="noopener">
-          <span>📦</span> Add to Chrome / Brave / Edge
+      <!-- Unified Store CTA Section -->
+      <div class="store-cta-heading">Available on All Major Chromium &amp; Firefox Browsers</div>
+      <div class="store-buttons-grid">
+        <a href="https://chromewebstore.google.com/detail/1-click-ai-chat-harvester/ijlcbkgpgnejogbclkjkpmpojbgnndde" class="store-btn btn-chrome" target="_blank" rel="noopener">
+          <span>🌐</span> Add to Google Chrome (Free)
         </a>
-        <a href="https://store.frankbase.com/products/ai-chat-harvester/" class="btn btn-store" target="_blank" rel="noopener">
-          <span>👑</span> Activate Pro License on FrankBase Store ↗
+        <a href="https://microsoftedge.microsoft.com/addons/detail/1click-ai-chat-harvester/innbdpajdhcmdklaklhgfcpjkakmkihe" class="store-btn btn-edge" target="_blank" rel="noopener">
+          <span>🟦</span> Add to Microsoft Edge (Free)
         </a>
-        <a href="https://mastermanikant.com/support-ai-chat-harvester.html" class="btn btn-secondary" target="_blank" rel="noopener">
-          <span>🛡️</span> Support Portal
+        <a href="https://addons.mozilla.org/en-US/firefox/addon/1-click-ai-chat-harvester/" class="store-btn btn-firefox" target="_blank" rel="noopener">
+          <span>🦊</span> Add to Mozilla Firefox (Free)
         </a>
+      </div>
+
+      <div class="microcopy-row">
+        <span><span class="check-icon">✔</span> 100% Free Core Copy Box</span>
+        <span><span class="check-icon">✔</span> 14-Day Free Evaluation Pass</span>
+        <span><span class="check-icon">✔</span> Zero Cloud Honeypots</span>
+        <span><span class="check-icon">✔</span> No Credit Card Required</span>
       </div>
     </header>
 
-    <!-- Visual Showcase -->
-    <div class="hero-img-box">
-      <img src="../assets/ai-chat-harvester-preview.png" alt="1-Click AI Chat Harvester Extension Preview Interface" width="860" height="480" loading="eager" />
+    <!-- Marquee Banner -->
+    <div class="hero-banner-box">
+      <img src="../assets/ach-banner-1400x560.png" alt="1-Click AI Chat Harvester Marquee Banner Showcase" width="1400" height="560" loading="eager" />
     </div>
+
+    <!-- Authentic Interactive Showcase Gallery (5 Authentic Screenshots) -->
+    <section class="showcase-section" aria-labelledby="showcase-heading">
+      <div class="showcase-header">
+        <h2 id="showcase-heading">📸 Visual Product Tour (5 Interactive Views)</h2>
+        <div class="tabs-bar" role="tablist">
+          <button type="button" class="tab-btn active" role="tab" onclick="switchTab(0, this)">🖥️ Side Panel</button>
+          <button type="button" class="tab-btn" role="tab" onclick="switchTab(1, this)">📝 Obsidian Markdown</button>
+          <button type="button" class="tab-btn" role="tab" onclick="switchTab(2, this)">🖨️ A4 PDF Print</button>
+          <button type="button" class="tab-btn" role="tab" onclick="switchTab(3, this)">📦 6 Export Formats</button>
+          <button type="button" class="tab-btn" role="tab" onclick="switchTab(4, this)">🔒 100% Offline</button>
+        </div>
+      </div>
+
+      <div class="showcase-display">
+        <img id="showcase-img" src="../assets/ach-screenshot-sidepanel.png" alt="Side Panel View Interface" width="1280" height="800" />
+        <div id="showcase-caption" class="showcase-caption">
+          <strong>🖥️ Side Panel View:</strong> Docked in browser sidebar via Manifest V3 chrome.sidePanel API. Stays visible while navigating chats without interrupting your reading.
+        </div>
+      </div>
+    </section>
+
+    <!-- Core Features Grid (Khasiyat) -->
+    <section>
+      <h2 class="section-title">⚡ Why Researchers &amp; Engineers Rely on It</h2>
+      <p class="section-subtitle">Designed to eliminate platform lock-in and preserve valuable AI insights without compromise.</p>
+
+      <div class="grid-3">
+        <div class="feature-card">
+          <h3>🖨️ Executive Clean A4 PDF</h3>
+          <p>Zero orphan breaks, clean syntax highlighting for code blocks, and crisp typography formatted for physical printing or archiving.</p>
+        </div>
+
+        <div class="feature-card">
+          <h3>💾 Obsidian &amp; Notion Markdown</h3>
+          <p>Automatic YAML frontmatter with date, platform, model, and topic tags. Drops directly into your local Second Brain vault.</p>
+        </div>
+
+        <div class="feature-card">
+          <h3>📦 Developer JSON &amp; Clean TXT</h3>
+          <p>Role-based arrays (User / Assistant messages) ready for LLM fine-tuning, RAG ingestion pipelines, or unformatted raw text.</p>
+        </div>
+
+        <div class="feature-card">
+          <h3>📌 Manifest V3 Side Panel</h3>
+          <p>Operates alongside your research workflow. Select individual turns or export entire thousand-message threads instantly.</p>
+        </div>
+
+        <div class="feature-card">
+          <h3>🛡️ 100% Offline in Browser RAM</h3>
+          <p>All DOM parsing and formatting executes strictly in client-side memory. Zero external server uploads, zero telemetry, zero leaks.</p>
+        </div>
+
+        <div class="feature-card">
+          <h3>🚫 Zero Watermark Guarantee</h3>
+          <p>Every exported document belongs solely to you. No vendor branding, no promotional footer links, and no clipped edges.</p>
+        </div>
+      </div>
+    </section>
 
     <!-- Supported Platforms -->
-    <div class="platforms-box">
-      <h3>Supported AI Chat Engines & Platforms</h3>
+    <section class="platforms-box">
+      <h2 class="section-title">🌐 15 Supported Frontier AI Engines &amp; Platforms</h2>
+      <p class="section-subtitle">Extract and format conversations seamlessly across all leading frontier web interfaces:</p>
+      
       <div class="platform-tags">
-        <span class="tag">Google Gemini (Free & Advanced)</span>
-        <span class="tag">ChatGPT (GPT-4o, o1, Free)</span>
-        <span class="tag">Anthropic Claude (Sonnet, Opus)</span>
-        <span class="tag">DeepSeek (Chat & R1)</span>
-        <span class="tag">Perplexity AI</span>
-        <span class="tag">Microsoft Copilot</span>
-        <span class="tag">Grok AI (xAI)</span>
-        <span class="tag">Universal Web Text Extraction</span>
+        <span class="tag"><span class="tag-icon">⚡</span> Google Gemini (Free &amp; Advanced)</span>
+        <span class="tag"><span class="tag-icon">🔍</span> Google Search AI Mode / AI Overview</span>
+        <span class="tag"><span class="tag-icon">🧪</span> Google AI Studio</span>
+        <span class="tag"><span class="tag-icon">🤖</span> ChatGPT (GPT-4o, o1, Free)</span>
+        <span class="tag"><span class="tag-icon">🧠</span> Anthropic Claude (Sonnet, Opus)</span>
+        <span class="tag"><span class="tag-icon">🌊</span> DeepSeek (Chat &amp; R1)</span>
+        <span class="tag"><span class="tag-icon">🌐</span> Perplexity AI</span>
+        <span class="tag"><span class="tag-icon">🪟</span> Microsoft Copilot</span>
+        <span class="tag"><span class="tag-icon">🚀</span> Grok AI (xAI)</span>
+        <span class="tag"><span class="tag-icon">📄</span> Universal Web Text Extractor</span>
       </div>
-    </div>
+    </section>
 
-    <!-- Core Features Grid -->
-    <div class="grid-3">
-      <div class="feature-card">
-        <h3>🖨️ Executive Clean PDF</h3>
-        <p>A4 print-ready layout with zero orphan page breaks. Clean syntax highlighting for code blocks without clipped edges.</p>
-      </div>
+    <!-- Uniform Onboarding & Get Started Workflow -->
+    <section class="workflow-box">
+      <h2>🚀 How It Works (Complete Uniformity Everywhere)</h2>
+      <p>Whether you discover 1-Click AI Chat Harvester here on GitHub, on Twitter, or inside the Chrome Web Store, the onboarding experience is identical and seamless:</p>
 
-      <div class="feature-card">
-        <h3>💾 Obsidian / Notion Markdown</h3>
-        <p>Structured Markdown (.md) with automatic YAML frontmatter (date, platform, model, title) ready for your Second Brain vault.</p>
-      </div>
-
-      <div class="feature-card">
-        <h3>📦 Structured JSON & TXT</h3>
-        <p>Role-based arrays (User / Assistant messages) for developer fine-tuning, RAG pipelines, or pure unformatted text.</p>
-      </div>
-
-      <div class="feature-card">
-        <h3>📌 Side Panel Split-Screen</h3>
-        <p>Dock the harvester in your browser sidebar via Manifest V3 sidePanel API. It stays open while you navigate chats.</p>
-      </div>
-
-      <div class="feature-card">
-        <h3>🛡️ 100% Offline & Stateless</h3>
-        <p>Zero cloud servers. All harvesting, parsing, and rendering happens locally inside your browser memory. Zero tracking.</p>
-      </div>
-
-      <div class="feature-card">
-        <h3>🚫 Zero Watermark Guarantee</h3>
-        <p>Your research belongs to you. No promotional footer text, no watermarks, and no third-party branding on any exported document.</p>
-      </div>
-    </div>
-
-    <!-- How to Activate Section (Funnel to FrankBase Store) -->
-    <div class="activation-box">
-      <h2>🔑 How to Activate Your Pro License (3 Simple Steps)</h2>
-      <p>Enjoy 14 days of unrestricted trial, then activate lifetime access directly on our official store:</p>
-
-      <div class="steps-list">
-        <div class="step-item">
-          <div class="step-number">Step 01</div>
-          <h4>Install Extension</h4>
-          <p>Install from the <a href="https://chromewebstore.google.com/detail/1-click-ai-chat-harvester/ijlcbkgpgnejogbclkjkpmpojbgnndde" target="_blank" rel="noopener" style="color:var(--accent);">Chrome Web Store</a> or Edge Add-ons with 1 click.</p>
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-num">Step 01</div>
+          <h4>Install Free</h4>
+          <p>Click your browser button above to install directly from the official store with zero setup.</p>
         </div>
 
-        <div class="step-item">
-          <div class="step-number">Step 02</div>
-          <h4>Get License Key</h4>
-          <p>Visit <a href="https://store.frankbase.com/products/ai-chat-harvester/" target="_blank" rel="noopener" style="color:var(--gold);">FrankBase Store</a> to secure your permanent hardware-bound license key.</p>
+        <div class="step-card">
+          <div class="step-num">Step 02</div>
+          <h4>Auto Get-Started</h4>
+          <p>Upon install, the official onboarding guide opens automatically with quick keyboard shortcuts (Alt+C, Alt+D).</p>
         </div>
 
-        <div class="step-item">
-          <div class="step-number">Step 03</div>
-          <h4>Enter in Settings</h4>
-          <p>Open extension settings, paste your license key, and click Activate. Unlimited exports unlocked forever.</p>
+        <div class="step-card">
+          <div class="step-num">Step 03</div>
+          <h4>Harvest Instantly</h4>
+          <p>Open any Gemini or ChatGPT thread. Click the side panel icon to copy or export with 1 click.</p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-num">Step 04</div>
+          <h4>Pro Lifetime Key</h4>
+          <p>Enjoy 14 days of unrestricted trial. Upgrade anytime on FrankBase Store for lifetime multi-device access.</p>
         </div>
       </div>
 
-      <div style="text-align: center; margin-top: 1rem;">
-        <a href="https://store.frankbase.com/products/ai-chat-harvester/" class="btn btn-store" target="_blank" rel="noopener" style="padding: 0.85rem 2rem; font-size: 1.05rem;">
-          🛒 Get Your Lifetime Pro License on FrankBase Store ↗
+      <div class="store-cta-card">
+        <div class="store-cta-info">
+          <h4>Want to Explore Pro Licensing &amp; Dedicated Docs?</h4>
+          <p>Visit the official product page on FrankBase Store for trial evaluation keys, hardware licensing details, and customer reviews.</p>
+        </div>
+        <a href="https://store.frankbase.com/products/one-click-ai-chat-harvester-100-percent-offline/" class="btn-store-link" target="_blank" rel="noopener">
+          Visit FrankBase Store Product Page ↗
         </a>
       </div>
-    </div>
+    </section>
 
     <footer>
       <p>
-        <strong>1-Click AI Chat Harvester PRO</strong> is part of the sovereign software ecosystem architected by 
+        <strong>1-Click AI Chat Harvester</strong> is part of the sovereign software ecosystem architected by 
         <a href="https://mastermanikant.com" target="_blank" rel="noopener">Master Manikant Yadav (मास्टर मणिकान्त यादव)</a>.
       </p>
       <p style="margin-top: 0.5rem;">
@@ -467,11 +720,52 @@
         <a href="https://store.frankbase.com">FrankBase Store</a>
       </p>
       <p style="margin-top: 0.5rem; font-size: 0.78rem; color: #64748b;">
-        Contact & Support: <code>connect@mastermanikant.com</code> | Supaul, Bihar, India
+        Contact &amp; Support: <code>connect@mastermanikant.com</code> | Supaul, Bihar, India
       </p>
     </footer>
 
   </div>
+
+  <script>
+    const showcaseData = [
+      {
+        src: '../assets/ach-screenshot-sidepanel.png',
+        alt: 'Side Panel View Interface',
+        caption: '<strong>🖥️ Side Panel View:</strong> Docked in browser sidebar via Manifest V3 chrome.sidePanel API. Stays visible while navigating chats without interrupting your reading.'
+      },
+      {
+        src: '../assets/ach-screenshot-markdown.png',
+        alt: 'Obsidian & Notion Markdown View',
+        caption: '<strong>📝 Pristine Math &amp; Markdown:</strong> Renders LaTeX formulas, tables, and code snippets into perfect GitHub-flavored Markdown with automated YAML frontmatter.'
+      },
+      {
+        src: '../assets/ach-screenshot-pdf.png',
+        alt: 'Executive A4 PDF Print Interface',
+        caption: '<strong>🖨️ A4 Executive PDF Print:</strong> Generates clean, printer-ready documents with zero orphan breaks, zero clipped code blocks, and zero vendor watermarks.'
+      },
+      {
+        src: '../assets/ach-screenshot-formats.png',
+        alt: '6 Export Formats Interface',
+        caption: '<strong>📦 6 Export Formats:</strong> Executive PDF, Obsidian Markdown, Structured JSON, Pure TXT, High-Res PNG, and Standalone Dark Cyber HTML.'
+      },
+      {
+        src: '../assets/ach-screenshot-offline.png',
+        alt: '100% Offline Air-Gapped Security',
+        caption: '<strong>🔒 100% Offline Air-Gapped:</strong> Executes strictly in local browser memory. No cloud servers, no account required, and zero telemetry.'
+      }
+    ];
+
+    function switchTab(idx, btn) {
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const data = showcaseData[idx];
+      const img = document.getElementById('showcase-img');
+      const caption = document.getElementById('showcase-caption');
+      img.src = data.src;
+      img.alt = data.alt;
+      caption.innerHTML = data.caption;
+    }
+  </script>
 
 </body>
 </html>
