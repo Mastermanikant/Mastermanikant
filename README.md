@@ -1,18 +1,15 @@
 # Master Manikant Yadav (मास्टर मणिकान्त यादव)
 
 > **Solopreneur Systems Architect & Educator**  
-> Based in Supaul, Bihar, India | Official Hub: [mastermanikant.com](https://mastermanikant.com)
+> Based in Supaul, Bihar, India | Official Sovereign Hub: [mastermanikant.com](https://mastermanikant.com)
 
-```
-       _____ _             _      _
-      |  ___| |           | |    | |
-      | |_  | | _____  ___| |_   | |    __ _ _ __  ___
-      |  _| | |/ / _ \/ __| __|  | |   / _` | '_ \/ __|
-      | |   |   <  __/\__ \ |_   | |__| (_| | |_) \__ \
-      \_|   |_|\_\___||___/\__|  \_____\__,_| .__/|___/
-                                            | |
-                                            |_|
-```
+<div align="center">
+  <br/>
+  <img src="assets/founder-frankpass-lock.png" alt="Master Manikant Yadav with FrankPass Sovereign Cryptographic Lock" width="440" style="max-width: 100%; border-radius: 14px; border: 1px solid rgba(255, 255, 255, 0.15); box-shadow: 0 12px 32px rgba(0,0,0,0.6);" />
+  <br/>
+  <sub><em>Master Manikant Yadav with the FrankPass Sovereign Cryptographic 3D Lock</em></sub>
+  <br/><br/>
+</div>
 
 ---
 
