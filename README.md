@@ -24,11 +24,25 @@ I am a solopreneur systems architect and mathematics educator dedicated to sover
 
 ---
 
+### ⚡ Security by Mathematical Proof (Zero Cloud Honeypots)
+
+```javascript
+// Deterministic WebCrypto derivation in 5 lines (Zero Server Storage):
+const enc = new TextEncoder();
+const rawKey = await crypto.subtle.importKey("raw", enc.encode(masterSecret), "PBKDF2", false, ["deriveBits"]);
+const derived = await crypto.subtle.deriveBits(
+  { name: "PBKDF2", salt: enc.encode(domain), iterations: 1000000, hash: "SHA-512" },
+  rawKey, 256
+);
+```
+
+---
+
 ### 🚀 Flagship Open Architectures & Systems
 
 | Project | Description | Live Deployment |
 | :--- | :--- | :--- |
-| **[FrankPass](https://github.com/Mastermanikant/frank-pass)** | 100% Stateless & Zero-Knowledge Deterministic Password Generator (PBKDF2-HMAC-SHA512, 1M iterations, zero server storage). | [frankpass.com](https://frankpass.com) |
+| **[FrankPass](https://github.com/Mastermanikant/frank-pass)** | 100% Stateless & Zero-Knowledge Deterministic Password Generator (PBKDF2-HMAC-SHA512, 1M iterations, zero server storage). Source-available for security audit. | [frankpass.com](https://frankpass.com) &bull; [Live Demo](https://mastermanikant.github.io/frank-pass/) |
 | **[1-Click AI Chat Harvester](https://github.com/Mastermanikant/frankbase-transparency-ledger)** | Sovereign client-side Markdown, PDF, and Text exporter for ChatGPT, Claude, Gemini, DeepSeek, and Reddit. | [Chrome Store](https://chromewebstore.google.com/detail/1-click-ai-chat-harvester/ijlcbkgpgnejogbclkjkpmpojbgnndde) |
 | **[FrankBase Tools](https://github.com/Mastermanikant/frankbase-tools)** | 50+ free, instant, 100% in-browser web utilities (PDF, cryptography, text, formatting) with zero server uploads. | [tools.frankbase.com](https://tools.frankbase.com) |
 | **[FrankBase Transparency Ledger](https://github.com/Mastermanikant/frankbase-transparency-ledger)** | Public cryptographic audit trail for customer reviews and SHA-256 release checksums. | [store.frankbase.com](https://store.frankbase.com) |
